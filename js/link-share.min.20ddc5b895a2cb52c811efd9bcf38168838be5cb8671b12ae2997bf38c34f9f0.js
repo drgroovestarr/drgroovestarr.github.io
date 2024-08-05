@@ -1,0 +1,1 @@
+async function linkShare(c,a,d){let b={title:c,text:d,url:a};if(typeof navigator.canShare=="function"&&navigator.canShare(b))try{await navigator.share(b)}catch(a){console.error(a)}else if(navigator?.clipboard?.writeText)try{await navigator.clipboard.writeText(a)}catch(a){console.error(a)}else console.log("Neither WebShare API nor CLipboard API is supported")}
